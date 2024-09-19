@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reconocimiento de Patentes Vehiculares</title>
+
+    <script async src="https://docs.opencv.org/4.x/opencv.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@v2.1.5/dist/tesseract.min.js"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        video, canvas {
+            display: block;
+            margin: 20px auto;
+        }
+        #attendance-log {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f5f5f5;
+            border: 1px solid #ccc;
+            max-width: 720px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <video id="video" width="720" height="560" autoplay muted></video>
+        <canvas id="canvas" width="720" height="560"></canvas>
+    </div>
+    
+    <!-- Log de asistencia -->
+    <div id="attendance-log"></div>
+
+    <script src="/script_patentes.js"></script> <!-- Tu script modificado -->
+</body>
+</html>
